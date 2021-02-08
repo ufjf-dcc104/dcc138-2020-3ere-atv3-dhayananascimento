@@ -13,7 +13,7 @@
       const ctx = canvas.getContext("2d");
 
       const skelly = new Image();
-      skelly.src = "./assets/skelly.png";
+      skelly.src = "./assets/bird.png";
 
       skelly.addEventListener("load", terminouDeCarregar);
 
@@ -27,27 +27,9 @@
       let quadro = 0;
       let pose = 0;
       const POSES = [
-        { qmax: 7, pv: 9 },
-        { qmax: 7, pv: 9 },
-        { qmax: 7, pv: 9 },
-        { qmax: 7, pv: 9 },
-        { qmax: 8, pv: 9 },
-        { qmax: 8, pv: 9 },
-        { qmax: 8, pv: 9 },
-        { qmax: 8, pv: 9 },
-        { qmax: 9, pv: 9 },
-        { qmax: 9, pv: 9 },
-        { qmax: 9, pv: 9 },
-        { qmax: 9, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 6, pv: 9 },
-        { qmax: 13, pv: 27 },
-        { qmax: 13, pv: 27 },
-        { qmax: 13, pv: 27 },
-        { qmax: 13, pv: 27 },
-        { qmax: 6, pv: 9 },
+        { qmax: 5, pv: 6 },
+        { qmax: 5, pv: 6 },
+        { qmax: 4, pv: 6 },
       ];
 
       function terminouDeCarregar() {}
@@ -68,15 +50,15 @@
         ctx.drawImage(
           skelly,
           //sx, sy, sw, sh
-          Math.floor(quadro) * 64,
-          pose * 64,
-          64,
-          64,
+          Math.floor(quadro) * 182,
+          pose * 182,
+          182,
+          182,
           //dx, dy, dw, dh
           0,
           0,
-          64,
-          64
+          182,
+          182
         );
 
         requestAnimationFrame(passo);
